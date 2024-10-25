@@ -5,12 +5,7 @@
 WordPress with SQLite, ready to use out of the box.
 
 - Based on [official image](https://hub.docker.com/_/wordpress), Easier and more sustainable solution.
-- DockerHub Page: https://hub.docker.com/r/soulteary/sqlite-wordpress
-
-## Articles
-
-- [WordPress SQLite Docker image packaging details](https://soulteary.com/2024/04/21/wordpress-sqlite-docker-image-packaging-details.html)
-- [WordPress farewell to MySQL: Docker SQLite WordPress](https://soulteary.com/2024/04/17/say-goodbye-to-mysql-docker-sqlite-wordpress.html)
+- DockerHub Page: https://hub.docker.com/r/johanneswk/wordpress-sqlite
 
 ## Quick Start
 
