@@ -1,9 +1,11 @@
-FROM wordpress:fpm-alpine
+FROM wordpress:latest
 
+RUN apt-get update -y && apt-get install zip -y
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV WORDPRESS_PREPARE_DIR=/usr/src/wordpress
 
-#RUN curl -L -o sqlite-database-integration.zip "https://downloads.wordpress.org/plugin/sqlite-database-integration.latest-stable.zip" && \
+ENV SQLITE_DATABASE_INTEGRATION_VERSION=2.1.15
+
 RUN curl -L -o sqlite-database-integration.zip "https://downloads.wordpress.org/plugin/sqlite-database-integration.latest-stable.zip" && \
     unzip  sqlite-database-integration.zip && \
     mkdir -p ${WORDPRESS_PREPARE_DIR}/wp-content/mu-plugins/sqlite-database-integration && \
