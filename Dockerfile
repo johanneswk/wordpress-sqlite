@@ -3,6 +3,7 @@ FROM wordpress:fpm-alpine
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV WORDPRESS_PREPARE_DIR=/usr/src/wordpress
 
+#RUN curl -L -o sqlite-database-integration.zip "https://downloads.wordpress.org/plugin/sqlite-database-integration.latest-stable.zip" && \
 RUN curl -L -o sqlite-database-integration.zip "https://downloads.wordpress.org/plugin/sqlite-database-integration.latest-stable.zip" && \
     unzip  sqlite-database-integration.zip && \
     mkdir -p ${WORDPRESS_PREPARE_DIR}/wp-content/mu-plugins/sqlite-database-integration && \
