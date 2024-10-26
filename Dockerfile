@@ -1,5 +1,7 @@
 FROM wordpress:latest
 
+VOLUME /var/www/html
+
 SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 ENV WORDPRESS_PREPARE_DIR=/usr/src/wordpress
 
@@ -16,3 +18,4 @@ RUN curl -L -o sqlite-database-integration.zip "https://downloads.wordpress.org/
     mkdir "${WORDPRESS_PREPARE_DIR}/wp-content/database" && \
     touch "${WORDPRESS_PREPARE_DIR}/wp-content/database/.ht.sqlite" && \
     chmod 640 "${WORDPRESS_PREPARE_DIR}/wp-content/database/.ht.sqlite"
+
